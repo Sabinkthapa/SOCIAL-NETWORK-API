@@ -1,6 +1,6 @@
 const { timeStamp } = require('console');
 const {Schema , model} = require ('mongoose');
-const reactionSchema =require('./reactions')
+const reactionSchema =require('./Reaction')
 
 
 //schema to create thought model
@@ -17,7 +17,7 @@ const thoughtSchema = new Schema (
             get:(timeStamp) => timeStamp.toISOString(),
         },
 
-        reactions:[reactionSchema], //embedded 
+        Reaction:[reactionSchema], //embedded 
         //referencing the user model
         userId: {
             type: Schema.Types.ObjectId,
