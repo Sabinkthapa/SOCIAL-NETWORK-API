@@ -26,21 +26,3 @@ router.route('/:userId/friends/:friendId').delete(removeFriend);
 
 module.exports =router;
 
-
-//get all users
-//get a single user by _id
-//post a new user
-//put to update a user by its _id,
-//delete to remove user by its _id
-
-// /api/users
-
-// GET all users
-
-// GET a single user by its _id and populated thought and friend data
-
-// POST a new user:
-
-// PUT to update a user by its _id
-
-// DELETE to remove user by its _id

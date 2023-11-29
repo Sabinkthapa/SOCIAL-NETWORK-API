@@ -1,7 +1,6 @@
 const connection =require('../config/connection');
 const {User, Thought} = require('../models');
-const {getRandomName,getRandomArrItem,
-    getRandomThought,getRandomReaction,
+const {getRandomName,getRandomArrItem,getRandomThought,getRandomReaction,
 }  = require('./data')
 
 const seedDatabase = async () => {
@@ -15,7 +14,7 @@ const seedDatabase = async () => {
         const name =getRandomName();
         users.push({
             firstName: name.split(' ')[0],
-            lastname: name.split(' ')[1],
+            lastName: name.split(' ')[1],
         });
     }
 
@@ -30,7 +29,7 @@ const seedDatabase = async () => {
 
     const allUsers = await User.find({});
     allUsers.forEach((user) => {
-        const username = `${user.firstName} ${user.lastname}`;
+        const username = `${user.firstName} ${user.lastName}`;
         for (let i=0; i <2; i++){
             const newThought =getRandomThought();
         newThought.userId = user._id;

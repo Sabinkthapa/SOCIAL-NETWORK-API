@@ -1,7 +1,8 @@
 {
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mongoose": "^8.0.1",
+    "mongoose": "^8.0.2",
     "node": "^21.2.0",
     "nodemon": "^3.0.1",
     "validator": "^13.11.0"
@@ -12,7 +13,7 @@
   "scripts": {
     "dev": "nodemon index",
     "start": "node index",
-    "seed":"node utils/seed"
+    "seed": "node utils/seed"
   },
   "keywords": [],
   "author": "",

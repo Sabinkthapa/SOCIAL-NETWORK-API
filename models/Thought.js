@@ -1,4 +1,4 @@
-const { timeStamp } = require('console');
+
 const {Schema , model} = require ('mongoose');
 const reactionSchema =require('./Reaction')
 
@@ -17,7 +17,7 @@ const thoughtSchema = new Schema (
             get:(timeStamp) => timeStamp.toISOString(),
         },
 
-        Reaction:[reactionSchema], //embedded 
+        reactions:[reactionSchema], //embedded 
         //referencing the user model
         userId: {
             type: Schema.Types.ObjectId,
