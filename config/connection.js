@@ -1,9 +1,19 @@
+const mongoose = require('mongoose');
+require('dotenv').config();
 
-const { connect, connection } =require ('mongoose');
+const dbUri = process.env.MONGODB_URI;
 
-const connectionString = process.env.MONGOODB_URL || 'mongodb://127.0.0.1:27017/SocialNetwork';
+mongoose.connect(dbUri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-connect(connectionString);
+const connection = mongoose.connection;
+
+connection.on('error', console.error.bind(console, 'connection error:'));
+connection.once('open', () => {
+  console.log('MongoDB connection established successfully');
+});
 
 module.exports = connection;
 

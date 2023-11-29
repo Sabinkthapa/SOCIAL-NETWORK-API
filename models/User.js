@@ -1,35 +1,37 @@
  const {Schema , model} =require('mongoose');
- import {isEmail} from 'validator'
+//  import {isEmail} from 'validator'
 
 //schema to create user model
  const userSchema = new Schema (
     {
-        username: {
+        firstName: {
             type: String,
             required:true,
-            unique: true,
-            trim:true,
+            maxlength:55,
         },
-        email: {
-            type: String,
-            required: 'Email address is required',
-            unique: true,
-            validate : [isEmail, 'Invalid email'],
+        lastName: {
+            type:String,
+            required:true,
+            maxlength:55,
         },
-        thoughts: {
-            type:Schema.type.ObjectId,
+        thoughts: [
+        {
+            type:Schema.Types.ObjectId,
             ref:'Thought' //referenece to the THought model
 
         },
-        friends: {
-            type:Schema.type.ObjectId,
+    ],
+        friends: [
+            {
+            type:Schema.Types.ObjectId,
             ref:'User', //Reference to user Model
         },
-
+    ],
+},
+    {
         toJSON: {
-        getters: true
+        getters: true,
         },
-        id:false,
     }
  );
 
