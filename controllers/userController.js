@@ -98,13 +98,13 @@ async getSingleUser(req , res) {
             const friendId= req.body.friendId;
             const user = await User.findOneAndUpdate(
                 {_id: req.params.userId},
-                {$addToset : {friends: friendId}}, //$addtoset operator adds a value to an array unless the value is already present
+                {$addToSet : {friends: friendId}}, //$addtoset operator adds a value to an array unless the value is already present
                 {new:true}
             );
             if (!user) {
                 return res.status(404).json({message:'no user with this id!'});
             }
-            res.join({
+            res.json({
                 message:`Friend added`,
             });
         } catch(err) {

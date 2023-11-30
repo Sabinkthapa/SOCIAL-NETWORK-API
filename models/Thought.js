@@ -6,7 +6,7 @@ const reactionSchema =require('./Reaction')
 //schema to create thought model
 const thoughtSchema = new Schema (
     {
-        thoughtText :{
+        message :{
             type: String,
             required: true,
             maxlength: 280,
