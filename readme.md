@@ -56,7 +56,7 @@ Compass is free to use and source available, and can be run on macOS, Windows, a
   ## links
 - Link of my [Github repository]()
 - Link to screencastify of get routes of user,thoughts and post delete update of user and thoughts [Application_walkthrough] (https://drive.google.com/file/d/14G8kDdiXcUx9sJoWo07UA1aO61H8ilu6/view)
-- Link to screencastify of post and delete friend [Application_walkthrough] (hhttps://drive.google.com/file/d/1lSMohCK7zaLSRQLCWIsz86zdAVKaM99g/view)
+- Link to screencastify of post and delete friend [Application_walkthrough] (https://drive.google.com/file/d/1lSMohCK7zaLSRQLCWIsz86zdAVKaM99g/view)
 - Add reaction and delete reaction [Application_walkthrough] (https://drive.google.com/file/d/1T7ePoUO0GtXmya0vDk_YnUZAgGsh7RPU/view)
 
   ## Credits
